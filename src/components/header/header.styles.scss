@@ -1,0 +1,51 @@
+@import '../../App.scss';
+
+header{
+    width: 100vw;
+    height: 450px;
+    background-color: $beige;
+    padding: 20px;
+    box-sizing: border-box;
+
+    h1{
+        font-family: 'Time Land', serif;
+        color: $dark-grey;
+        font-size: 100px;
+        line-height: 50px;
+        font-weight: normal;
+        margin: 80px 0px 10px;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    header{
+
+        h1{
+            font-size: 150px;
+            line-height: 90px;
+            width: 40%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    header{
+        padding: 20px 100px;
+
+        h1{
+            width: 100%;
+            font-size: 200px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    header{
+
+        h1{
+            font-size: 250px;
+            margin: 100px 0px 0px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import '../../App.scss';
+
+.page-breaker{
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $dark-grey;
+
+    h3{
+        color: $beige;
+        font-family: 'Time Land', serif;
+        font-weight: normal;
+        font-size: 100px;
+        line-height: 70px;
+        margin: 0px 0px 50px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .page-breaker{
+        
+        h3{
+            width: 50%;
+            text-align: left;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .page-breaker{
+        padding: 20px 100px;
+        min-height: 250px;
+
+        h3{
+            font-size: 130px;
+            line-height: 90px;
+        }
+    }
+}

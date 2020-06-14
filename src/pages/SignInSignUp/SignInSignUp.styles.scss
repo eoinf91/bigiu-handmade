@@ -1,0 +1,33 @@
+@import '../../App.scss';
+
+.sign-in-sign-up{
+    padding: 200px 20px 20px;
+
+    h2{
+        font-size: 70px;
+        line-height: 60px;
+        margin: 0px;
+    }
+
+    p{
+        margin: 20px 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .sign-in-sign-up{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .sign-in-sign-up{
+        padding: 200px 100px;
+
+        h2{
+            text-align: left;
+        }
+    }
+}

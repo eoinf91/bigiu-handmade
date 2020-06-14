@@ -1,0 +1,75 @@
+$beige: #F8E4D4;
+$light-beige: #FFF5ED;
+$dark-grey: #656565;
+
+@font-face {
+    font-family: 'Time Land';
+    src: local('Tiime_Land-Regular'), url('./fonts/Tiime_Land-Regular.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    font-family: 'Time Land', sans-serif;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 20px;
+    margin: 0px 0px 40px;
+    color: $dark-grey;
+}
+
+p{
+    font-family: futura-pt, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark-grey;
+    font-weight: 400;
+}
+
+.button{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: $light-beige;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    text-transform: uppercase;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    color: $dark-grey;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1366px){
+    h2{
+        font-size: 100px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    p{
+        font-size: 18px;
+        line-height: 24px;
+        color: $dark-grey;
+    }
+
+    .button{
+        font-size: 18px;
+        width: 250px;
+        padding: 15px 20px;
+        transition: all 1s ease;
+
+        &:hover{
+            background-color: $beige;
+        }
+    }
+}

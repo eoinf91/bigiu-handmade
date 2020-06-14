@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.product-button-container{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px){
+    .product-button-container{
+        
+        .product-buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .product-button-container{
+        padding: 40px 100px 20px;
+    }
+}

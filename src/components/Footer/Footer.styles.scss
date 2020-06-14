@@ -1,0 +1,91 @@
+@import '../../App.scss';
+
+footer{
+    background-color: $beige;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .logo{
+
+        img{
+            display: block;
+            width: 50px;
+            margin: 0px auto;
+        }
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-between;
+        padding: 0px 20px;
+        box-sizing: border-box;
+        margin: 20px 0px;
+
+        li{
+            display: block;
+            font-family: futura-pt, sans-serif;
+            font-weight: 300;
+            font-size: 12px;
+            color: $dark-grey;
+            text-transform: uppercase;
+        }
+    }
+
+    .social-media{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80px;
+        margin: 40px auto 20px;
+    }
+
+    .footer-row{
+        margin: 20px 0px;
+        
+        p{
+            text-align: center;
+            font-family: futura-pt, sans-serif;
+            font-weight: 300;
+            font-size: 12px;
+            color: $dark-grey;
+            margin: 0px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    footer{
+        
+        .footer-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo{
+                width: calc(100% / 3 - 10px);
+                
+                img{
+                    margin: 0px;
+                }
+            }
+
+            ul{
+                width: calc(100% / 3 - 10px);
+            }
+
+            .social-media{
+                width: calc(100% / 3 - 10px);
+                margin: 0px;
+                justify-content: unset;
+                flex-direction: row-reverse;
+
+                img{
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+}

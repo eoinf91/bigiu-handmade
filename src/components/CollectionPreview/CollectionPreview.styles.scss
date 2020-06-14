@@ -1,0 +1,45 @@
+@import '../../App.scss';
+
+.collection-preview{
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0px 0px 30px;
+
+    .button{
+        margin: 10px auto;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .collection-preview{
+
+        .preview{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .product-item{
+                margin: 10px 0px 30px;
+
+                .copy{
+                    justify-content: space-between;
+
+                    p{
+                        text-align: left;
+                        
+                        &:first-of-type{
+                            width: 75%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .collection-preview{
+        padding: 20px 100px;
+    }
+}

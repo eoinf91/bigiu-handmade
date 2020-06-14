@@ -1,0 +1,14 @@
+@import '../../App.scss';
+
+.product-container{
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    background: linear-gradient(#ffffff 45%, $light-beige 45%);
+}
+
+@media only screen and (min-width: 1366px){
+    .product-container{
+        padding: 20px 100px;
+    }
+}

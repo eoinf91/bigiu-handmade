@@ -1,0 +1,20 @@
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px){
+    .sign-up{
+        margin-top: 0px;
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .sign-up{
+        margin-top: 0px;
+        width: calc(100% / 2 - 50px);
+    }
+}
