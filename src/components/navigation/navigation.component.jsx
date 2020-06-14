@@ -6,12 +6,16 @@ import { connect } from 'react-redux';
 // Styles
 import './navigation.styles.scss';
 
+// Components
+import CartDropdown from '../CartDropdown/CartDropdown.component';
+
 // Assets
 import Logo from '../../assets/bigiu_logo.png'
 import IG from '../../assets/ig.svg'
 import FB from '../../assets/fb.svg'
+import CartIcon from '../CartIcon/CartIcon.component';
 
-const Navigation = ({ currentUser }) => (
+const Navigation = ({ currentUser, hidden }) => (
     <nav>
         <ul>
             <li><Link to='/'>Home</Link></li>
@@ -27,6 +31,7 @@ const Navigation = ({ currentUser }) => (
             <img src={Logo} alt='Bigiu' />
         </div>
         <div className='social-media'>
+            <CartIcon />
             <div className='social-icon'>
                 <img src={IG} alt='IG' />
             </div>
@@ -34,11 +39,16 @@ const Navigation = ({ currentUser }) => (
                 <img src={FB} alt='FB' />
             </div>
         </div>
+        {hidden 
+            ? null
+            : <CartDropdown />
+        }
     </nav>
 )
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden }}) => ({
+    currentUser,
+    hidden
 })
 
 export default connect(mapStateToProps)(Navigation);
