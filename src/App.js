@@ -7,7 +7,6 @@ import './App.scss';
 // Pages
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
-import CollectionPage from './pages/collectionpage/collectionpage.component';
 import SignInSignUpPage from './pages/SignInSignUp/SignInSignUp.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 
@@ -54,8 +53,7 @@ class App extends React.Component {
       <div>
         <Navigation />
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/shop' component={ShopPage} />
-        <Route path='/shop/:collectionId' component={CollectionPage} />
+        <Route path='/shop' component={ShopPage} />
         <Route exact path='/checkout' component={CheckoutPage} />
         <Route exact path='/signin' 
           render={ () => this.props.currentUser 

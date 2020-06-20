@@ -1,7 +1,7 @@
 @import '../../App.scss';
 
 .product-item{
-    width: 100%;
+    width: 100vw;
     margin: 20px 0px;
 
     .image{
@@ -28,7 +28,7 @@
 
 @media only screen and (min-width: 768px){
     .product-item{
-        width: calc(100% / 3 - 10px);
+        width: calc(100vw / 3 - 10px);
         margin: 0px;
 
         .image{
@@ -60,7 +60,8 @@
 
 @media only screen and (min-width: 1920px){
     .product-item{
-        width: calc(100% / 3 - 50px);
+        width: calc(100vw / 3 - 50px);
+        margin: 0px 0px 60px;
         
         .image{
             height: 450px;
