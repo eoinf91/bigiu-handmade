@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 // Styles
 import './CollectionPreview.styles.scss';
@@ -6,7 +7,7 @@ import './CollectionPreview.styles.scss';
 // Components
 import ProductItem from '../ProductItem/ProductItem.component';
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ title, items, routeName, history, match }) => (
     <div className='collection-preview'>
         <h2 className='title'>{title}</h2>
         <div className='preview'>
@@ -17,8 +18,13 @@ const CollectionPreview = ({ title, items }) => (
                 ))
             }
         </div>
-        <div className='button'>Shop all {title}</div>
+        <div 
+            className='button' 
+            onClick={() => history.push(`${match.url}/${routeName}`)} 
+        >
+            Shop all {title}
+        </div>
     </div>
 )
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);

@@ -6,7 +6,10 @@ import { connect } from 'react-redux';
 import Header from '../../components/header/header.component';
 import CollectionsOverviewContainer from '../../components/collectionsOverview/collectionsOverview.container';
 import Footer from '../../components/Footer/Footer.component';
+import ShopCollection from './shopCollection.component';
+
 import CollectionPageContainer from '../collection/collection.container';
+import ItemPage from '../item/item.component';
 
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 
@@ -19,7 +22,8 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
         <div className='shop-page'>
             <Header />
             <Route exact path={`${match.path}`} component={CollectionsOverviewContainer} />
-            <Route path={`${match.path}/:collectionId`} component={CollectionPageContainer} />
+            <Route exact path={`${match.path}/:collectionId`} component={CollectionPageContainer} />
+            <Route path={`${match.path}/:collectionId/:linkUrl`} component={ItemPage} />
             <Footer />
         </div>
     )

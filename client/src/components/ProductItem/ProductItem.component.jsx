@@ -9,7 +9,7 @@ import CustomButton from '../CustomButton/CustomButton.component';
 import './ProductItem.styles.scss'
 
 const ProductItem = ({item, addItem}) => {
-    const { name, price, image } = item;
+    const { name, price, image, routeName } = item;
 
     return (
         <div className='product-item'>
